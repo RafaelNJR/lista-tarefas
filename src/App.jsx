@@ -40,7 +40,12 @@ function App() {
     <div className="app">
       <div className="container">
         <h1>Lista de Tarefas</h1>
-        <p>Organize suas atividades de forma simples.</p>
+<p>Organize suas atividades de forma simples.</p>
+
+<div className="contador">
+  Total: {tarefas.length} | Concluídas:{" "}
+  {tarefas.filter((tarefa) => tarefa.concluida).length}
+</div>
 
         <form onSubmit={adicionarTarefa} className="formulario">
           <input
