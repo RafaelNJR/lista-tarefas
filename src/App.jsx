@@ -58,7 +58,16 @@ function App() {
           <button type="submit">Adicionar</button>
         </form>
 
-        <div className="lista">
+        {tarefas.length > 0 && (
+  <button
+    className="limpar"
+    onClick={() => setTarefas([])}
+  >
+    Limpar todas
+  </button>
+)}
+
+<div className="lista">
           {tarefas.length === 0 ? (
             <p className="vazio">Nenhuma tarefa adicionada.</p>
           ) : (
